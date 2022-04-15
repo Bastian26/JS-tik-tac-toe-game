@@ -13,7 +13,6 @@ h1 {
     background: black;
     border: 0;
     font-size: 3rem;
-    border-radius: 8px;
     box-sizing: border-box;
     color: #FFFFFF;
     display: flex;
@@ -37,7 +36,8 @@ main {
 }
 
 #display {
-    font-family: "Bauhaus 93";
+    font-family: Bahnschrift;
+    font-size: 1.7rem;
     border: 2px solid black;
     border-radius: 5px;
     background: rgb(220,220,220);
@@ -45,6 +45,10 @@ main {
     height: 7%;
     margin: 1rem auto;
     text-align: center;
+    /** Beste Methode um Inhalt zentral auszurichten **/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #matchfield {
@@ -54,14 +58,35 @@ main {
     width: 80%;
     height: 80%;
     background: rgb(220,220,220);
-
-    display: grid;
-    grid-template-rows:200px 1fr 100px;
-    grid-template-columns:25% 25% 25% 25%;
-    grid-auto-flow: column;
 }
 
-.sidenav {
+.wrapper > div:nth-child(odd) {
+    background:#c4c3c0;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /** 3 Spalten */
+    grid-auto-rows: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    font-size: 1rem;
+}
+.box {
+    font-size: 6rem;
+    font-family: "Arial Black";
+    border: red 1px solid;
+    background:#8f8e8c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.nav {
     text-align: center;
     height: 8%;
     width: 100%;
@@ -75,7 +100,7 @@ main {
     padding-top: 0px;
 }
 
-.sidenav a {
+.nav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
@@ -83,7 +108,7 @@ main {
     display: inline-block;
 }
 
-.sidenav a:hover {
+.nav a:hover {
     color: #f1f1f1;
 }
 
